@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to My Homepage</h1>
+    <form action="submit-form" method="post">
+        <!-- Personal Information Section -->
+        <h2>Personal Information</h2>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required pattern="[A-Za-z]+" title="Only alphabetic characters allowed">
+        
+        <label for="mname">Middle Initial:</label>
+        <input type="text" id="mname" name="mname" placeholder="Optional" pattern="[A-Za-z]+" title="Only alphabetic characters allowed">
+        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required pattern="[A-Za-z]+" title="Only alphabetic characters allowed">
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Country Field -->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="" disabled selected>Select Your Country</option>
+            <option value="canada">Canada</option>
+            <option value="china">China</option>
+            <option value="germany">Germany</option>
+            <option value="india">India</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="turkey">Turkey</option>
+            <option value="united kingdom">United Kingdom</option>
+            <option value="united states of america">United States of America</option>
+        </select>
+
+        <!-- Matriculation Field -->
+        <label for="matriculation">Matriculation:</label>
+        <input type="text" id="matriculation" name="matriculation" maxlength="9" pattern="[0-9]{9}" 
+               title="Matriculation must be exactly 9 digits" required>
+
+        <!-- Semester Field -->
+        <label for="semester">Semester:</label>
+        <select id="semester" name="semester" required>
+            <option value="" disabled selected>Select Your Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <!-- Program Field -->
+        <label for="program">Program:</label>
+        <select id="program" name="program" required>
+            <option value="" disabled selected>Select Your Program</option>
+            <option value="M.A. (Master of Arts) (Master of Arts in Architecture)">M.A. (Master of Arts in Architecture)</option>
+            <option value="M.Sc. (Computer Science - Focus on Big Data & Artificial Intelligence)">M.Sc. (Computer Science - Big Data & AI)</option>
+            <option value="M.Eng. (Master of Engineering Information Technology)">M.Eng. (IT)</option>
+            <option value="M.Sc. (Master of Science in Data Science - Business Analytics)">M.Sc. (Data Science - Business Analytics)</option>
+            <option value="M.Eng. (Engineering and Sustainable Technology Management - Focus on Mobility and Automotive Industry)">M.Eng. (Sustainable Tech Management)</option>
+        </select>
+
+        <!-- Course Start Date -->
+        <label for="course_start_date">Course Start Date:</label>
+        <input type="date" id="course_start_date" name="course_start_date" required>
+
+        <!-- Graduate Program Source -->
+        <div class="centered-section">
+            <label>I've heard about this graduate program from:</label>
+            <div class="horizontal-checkbox-group">
+                <label><input type="checkbox" name="source" value="media"> Media</label>
+                <label><input type="checkbox" name="source" value="ads"> Ads</label>
+                <label><input type="checkbox" name="source" value="agency"> Agency</label>
+                <label><input type="checkbox" name="source" value="other"> Other</label>
+            </div>
+        </div>
+
+        <!-- Study Plan -->
+        <div class="centered-section">
+            <label>When I finish my study, I will:</label>
+            <div class="left-aligned-options">
+                <label><input type="radio" name="plan" value="return" required> Return to my country</label>
+                <label><input type="radio" name="plan" value="job_in_europe"> Find a job in Europe</label>
+                <label><input type="radio" name="plan" value="training"> Do practical training and then decide</label>
+            </div>
+        </div>
+
+        <!-- Feedback Field -->
+        <label for="feedback">Feedback for the course:</label>
+        <textarea id="feedback" name="feedback" rows="4" readonly>In this course Software and Development, I have gained knowledge about basic computer and programming concepts about C and Python, including important concepts like SDLC, strings, data structures, stacks, queues, and importantly web development languages like HTML, CSS, and JavaScript which helped me during the Homework. Homework’s were useful and gave us an opportunity to learn and made us to do coding by myself. I truly appreciate the knowledge shared by our professor and external resources provided for more knowledge.
+        </textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+    
+    <form action="submit form" method="post">
+        <h2> SDLC Methodologies </h2>
+        <p> I will write a paragraph for each methodology of <a href="https://aws.amazon.com/what-is/sdlc/">SDLC</a>. There are many of them, but I will suggest a few. My suggestion and reasons are as follows: </p>
+        <p><b> A.Agile Methodology </b></p>
+        <ul> 
+            <li>Highly adaptable to changes in requirements. Delivers working software in small, incremental cycles. Encourages collaboration and regular feedback from stakeholders.</li>
+            <li>Projects where requirements evolve frequently, or customer feedback is critical.</li>
+        </ul>
+        <p><b>B.DevOps</b></p>
+        <ul>
+            <li>Focuses on automation, continuous integration, and delivery. Speeds up development and deployment cycles. Enhances collaboration between development and operations teams.</li>
+            <li>Fast-paced environments, cloud-based solutions, and automation-driven projects.</li>
+        </ul>
+        <p><b>C.Scrum Framework</b></p>
+        <ul>
+            <li>Provides a structured way to handle complex projects through sprints. Enhances team accountability and transparency with defined roles and responsibilities. Allows for quick feedback and adjustments during each sprint.</li>
+            <li>Medium-sized teams working on complex, time-bound projects.</li>
+        </ul>
+
+        <p> Among so many SDLC Methodologies the ones that are in the AGILE classification are better. Among Agile SDLC Methods, I have also a few suggestions: </p>
+        <ul>
+            <li>Extreme Programming (XP) prioritizes customer satisfaction and high-quality code through frequent releases.</li>
+            <li>Kanaban is flexible and visual workflow management using boards.</li>
+            <li>Scrum Framework best suited for small to medium sized teams.</li>
+        </ul>
+
+        <p>In this software development and applications course of <a href="https://www.srh-university.de/en/master/computer-science-big-data-artificial-intelligence/i/"> SRH</a>, I have learned the following: </p>
+        <ul> 
+            <li>C programming language </li>
+            <li>SDLC</li>
+            <li>Front-End Web Development </li>
+        </ul>
+    </form>
+    
+    <form action="submit form" method="post">
+        <h2> CSS and JavaScript </h2>
+        <p> I have used <a href= "https://www.w3schools.com/html/html_css.asp">CSS</a> in this webpage and these are 3 ways to include CSS in a webpage as follows:</p>
+        <ul> 
+            <li>Inline CSS: CSS applied directly to an element using the style attribute.</li>
+            <li>Internal CSS: An internal CSS is defined in the 'head' section of an HTML page, within a 'style' element.</li>
+            <li>External CSS: CSS in seperate .css file linked to the HTML document. </li>
+        </ul>
+
+        <p>The reason CSS used in a webpage are:</p>
+        <ul>
+            <li>CSS separates the content (HTML) from its visual design, making it easier to maintain and update. Changes to the design can be made in the CSS without altering the HTML structure.</li>
+            <li>By using CSS, you can apply a consistent style across multiple pages of a website, ensuring uniformity in design elements like colors, fonts, and layout, which improves the user experience.</li>
+            <li>CSS allows you to create responsive designs that adjust to different screen sizes and devices, ensuring that your website looks good on desktops, tablets, and smartphones.</li>
+        </ul>
+
+        <p>We also use <a href="https://www.w3schools.com/html/html_scripts.asp">Javascript</a> in webpage development. The main reasons are as follows:</p>
+        <ul>
+            <li>JavaScript enables interactive elements like forms, buttons, and pop-ups on webpages.</li>
+            <li>It allows dynamic updates, such as live data feeds or chat features, without reloading the page.</li>
+            <li>JavaScript powers smooth animations and visual effects like image sliders and transitions.</li>
+            <li>It provides instant feedback to users through interactive forms, notifications, and validations.</li>
+            <li>JavaScript allows non-blocking calls (AJAX) to load data in the background, improving performance.</li>
+        </ul>
+    </form>
+
+        <form action="submit form" method="post">
+         <p>I have done this project myself and accept the consequences if found other ways. 
+            You can reach me at <a href="mailto: medeboyinasrinivasulu@gmail.com">medeboyinasrinivasulu@gmail.com</a></p>   
+        </form>
+</body>
+</html>
+
